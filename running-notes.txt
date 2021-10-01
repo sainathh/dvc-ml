@@ -6,4 +6,14 @@ To activate this environment
 
 Initialize git repo
     git init
+    git config user.name "sainathh"
+    git config user.email "sainadh.potta@gmail.com"
+    git remote add origin git@sainathh-github.com:sainathh/dvc-ml.git
+    git remote -v
+    git pull origin master --allow-unrelated-histories
 
+Create requirements.txt.
+    touch requirements.txt
+
+Insatll requirements
+    pip install -r requirements.txt
