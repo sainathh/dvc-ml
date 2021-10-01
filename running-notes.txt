@@ -17,6 +17,7 @@ Create requirements.txt.
 
 Insatll requirements
     pip install -r requirements.txt
+    pip list
 
 Initialize dvc
     dvc init
