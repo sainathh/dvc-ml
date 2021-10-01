@@ -25,3 +25,10 @@ Create the Project-Structure
 
 Edit and add path in config/config.yaml file
 
+
+To Execute Locally of src/utils/all_utils.py
+    python
+    from src.utils.all_utils import read_yaml
+    read_yaml("config/config.yaml")
+
+
