@@ -131,3 +131,7 @@ dmypy.json
 # vscode
 .vscode/
 .idea/
+
+# My Public SSH Keys
+sainathh-github
+sainathh-github.pub
