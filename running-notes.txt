@@ -20,3 +20,8 @@ Insatll requirements
 
 Initialize dvc
     dvc init
+
+Create the Project-Structure
+
+Edit and add path in config/config.yaml file
+
