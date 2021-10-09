@@ -4,15 +4,21 @@ stages:
     cmd: python src/stage_01_load_save.py --config=config/config.yaml
     deps:
     - path: config/config.yaml
-      md5: a5bcc5320664d7bc410d33a0cbd915da
-      size: 210
+      md5: 9b47c35f3576b331c958dcc8134e161e
+      size: 280
     - path: src/stage_01_load_save.py
-      md5: 7ad253bea46224123002a0d2b22edf91
-      size: 1282
+      md5: 75089dcc6221509da8343e1865809ab5
+      size: 1276
     - path: src/utils/all_utils.py
-      md5: 1e6145d7bcfd5841e4ebd32113b7a8fc
-      size: 341
+      md5: c2c1b899ed30c95c2372aebaf2dfdb44
+      size: 500
     outs:
     - path: artifacts/raw_local_dir/data.csv
       md5: 7d814a1bda02145efe703f4e1c01847a
       size: 93599
+  always_run:
+    cmd: python rough/test.py
+    outs:
+    - path: rough/test.txt
+      md5: d3020c9210757f5b5ac1c2e9782bfd1c
+      size: 21
