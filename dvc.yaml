@@ -13,7 +13,7 @@ stages:
       - artifacts/raw_local_dir/data.csv
   
   split_data:
-    cmd: python stage_02_split_data.py --config=config/config.yaml --params=params.yaml
+    cmd: python src/stage_02_split_data.py --config=config/config.yaml --params=params.yaml
     deps:
       - src/stage_02_split_data.py
       - config/config.yaml
@@ -22,3 +22,17 @@ stages:
     outs:
       - artifacts/split_data_dir/test.csv
       - artifacts/split_data_dir/train.csv
+  
+  train:
+    cmd: python src/stage_03_train.py --config=config/config.yaml --params=params.yaml
+    deps:
+      - src/stage_03_train.py
+      - config/config.yaml
+      - params.yaml
+      - artifacts/split_data_dir/train.csv
+    params:
+      - base.random_state
+      - model_params.ElasticNet.l1_ratio
+      - model_params.ElasticNet.alpha
+    outs:
+      - artifacts/model_dir/ElasticNet.model
